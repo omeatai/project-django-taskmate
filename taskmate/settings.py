@@ -33,8 +33,13 @@ DEBUG = env("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1",
                  "taskmate.ifeanyiomeata.com", "taskmate2.ifeanyiomeata.com"]
-CSRF_TRUSTED_ORIGINS = ["taskmate.ifeanyiomeata.com",
-                        "taskmate2.ifeanyiomeata.com"]
+CSRF_TRUSTED_ORIGINS = ["http://taskmate.ifeanyiomeata.com",
+                        "http://taskmate2.ifeanyiomeata.com", "https://taskmate.ifeanyiomeata.com",
+                        "https://taskmate2.ifeanyiomeata.com",
+                        "http://www.taskmate.ifeanyiomeata.com",
+                        "http://www.taskmate2.ifeanyiomeata.com",
+                        "https://www.taskmate.ifeanyiomeata.com",
+                        "https://www.taskmate2.ifeanyiomeata.com"]
 
 # Application definition
 
