@@ -32,14 +32,9 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = env("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1",
-                 "taskmate.ifeanyiomeata.com", "taskmate2.ifeanyiomeata.com"]
-CSRF_TRUSTED_ORIGINS = ["http://taskmate.ifeanyiomeata.com",
-                        "http://taskmate2.ifeanyiomeata.com", "https://taskmate.ifeanyiomeata.com",
-                        "https://taskmate2.ifeanyiomeata.com",
-                        "http://www.taskmate.ifeanyiomeata.com",
-                        "http://www.taskmate2.ifeanyiomeata.com",
-                        "https://www.taskmate.ifeanyiomeata.com",
-                        "https://www.taskmate2.ifeanyiomeata.com"]
+                 "taskmate.ifeanyiomeata.com"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://taskmate.ifeanyiomeata.com", "https://taskmate.ifeanyiomeata.com"]
 
 # Application definition
 
@@ -55,7 +50,8 @@ INSTALLED_APPS = [
     'todolist',
     'user_auth',
     'crispy_forms',
-    'crispy_bootstrap5',
+    # 'crispy_forms',
+    # 'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -156,8 +152,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+# CRISPY_TEMPLATE_PACK = 'bootstrap5'
+# CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'todolist'
 LOGIN_URL = 'login'
